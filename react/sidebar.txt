@@ -1,0 +1,90 @@
+import "./sidebar.css"
+
+export default function Sidebar() {
+  return (
+    <div className="sidebar">
+        <div className="sidebarTtitle">
+            <span className="sidebarTitle">About Me</span>
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK0_gO5Mh3AL7CBOOE7-SWGgJ9DptTyi_5nA&usqp=CAU"
+            alt=""
+            />
+            <p>
+            I believe in being strong when everything seems to be going wrong, I believe that happy girls are the prettiest girls.
+            </p>
+      </div>
+      <div className="sidebarItems">
+      <span className="sidebarTitle">CATEGORIES</span>
+      <ul className="sidebarList">
+        <li className="sidebarListItem">Life</li>
+        <li className="sidebarListItem">Music</li>
+        <li className="sidebarListItem">Style</li>
+        <li className="sidebarListItem">Sports</li>
+        <li className="sidebarListItem">Tech</li>
+        <li className="sidebarListItem">Cinemas</li>
+      </ul>
+      </div>
+      <div className="sidebarItems">
+      <span className="sidebarTitle">FOLLOW US</span>
+      <div className="sidebarSocial">
+      <i className="sidebaricon fa-brands fa-square-facebook"></i>
+      <i className="sidebaricon fa-brands fa-instagram"></i>
+      <i className="sidebaricon fa-brands fa-square-snapchat"></i>
+
+      </div>
+      </div>
+
+    </div>
+  );
+}
+.sidebar{
+    flex: 3;
+    margin: 20px;
+    padding-bottom: 30px;
+    background-color: #fdfbfb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.sidebarTitle{
+    margin:10px;
+    padding: 5px;
+    width:80%;
+    border-top: 1px solid #a7a4a4;
+    border-bottom: 'Varela Round',sans-serif;
+    font-family: 12px;
+    font-size: 12px;
+    color: #222;
+    font-weight:600;
+    line-height:20px;
+    text-align: center;
+}
+.sidebarItem > img{
+    margin-top:15px;
+}
+.sidebarItem >p{
+    padding:30px;
+}
+.sidebarList{
+    list-style: none;
+    margin-bottom: 30px;
+}
+.sidebarListItem{
+    display: inline-block;
+    width:50%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.sidebarSocial{
+    margin-top: 15px;
+    width: 250px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+.sidebaricon{
+    font-size: 16px;
+    margin-left:10px;
+    cursor: pointer;
+}

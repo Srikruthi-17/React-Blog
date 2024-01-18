@@ -1,0 +1,73 @@
+import "./login.css"
+
+export default function Login() {
+  return (
+    <div className="login">
+        <span className="logintitle">Login</span>
+        <div className="profile">
+       <form  className="login">
+        <label>Email</label>
+        <input type="text" className="logininput" placeholder="enter your email..."></input>
+        <label>Password</label>
+        <input type="password" className="logininput" placeholder="enter your password..."></input>
+        <button className="loginbutton">login</button>
+      
+       <button className="loginregisterbutton">Register</button>
+       </form>
+       </div>
+      
+    </div>
+  );
+}
+.login{
+    height: calc(100vh-50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background:linear-gradient(
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.5)
+    ),
+     url(https://t4.ftcdn.net/jpg/01/19/11/55/240_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg);
+    background-size: cover;
+    justify-content: center;
+} 
+.logintitle{
+    font-size: 40px;
+    font-style: italic;
+}
+.loginform{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.loginform > label{
+    margin: 20px,0;
+
+}
+.logininput{
+    padding: 10px;
+    border-color: white;
+    border: none;
+}
+.loginbutton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: coral;
+    border: none;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+.loginregisterbutton{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: teal;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color:white;
+    border-radius: 10px;
+}

@@ -1,0 +1,108 @@
+import './settings.css'
+import Sidebar from '../../components/sidebar/Sidebar'
+
+export default function Settings() {
+  return (
+    <div className='settings'>
+        <div className="settingswrapper">
+        <div className="settingsTitle">
+            <span className="settingsupdatetitle">Update your account</span>
+            <span className="settingsdeletetitle">Delete account</span>
+        </div>
+        <form  className="settingsform">
+            <label>Profile Picture</label>
+            <div className="settingspp">
+                <img
+                 src="https://e0.pxfuel.com/wallpapers/138/643/desktop-wallpaper-picsart-background-moon-real-moon.jpg"
+                 alt=""
+                />
+                <label htmlFor="fileinput">
+                <i className="settingsppicon fa-regular fa-user"></i>
+                </label>
+                <input type="file" id="fineleinput"style={{display:"none"}}></input>
+            </div>
+            <label>Username</label>
+            <input type="text" placeholder="adwith"></input>
+            <label>Email</label>
+            <input type="email" placeholder="adwith17@gmail.com"></input>
+            <label>Password</label>
+            <input type="password" ></input>
+            <button className="settingssubmit">Update</button>
+        </form>
+      
+    </div>
+    <Sidebar/>
+    </div>
+  )
+}
+.settings{
+    display: flex;
+}
+.settingswrapper{
+    flex:9;
+    padding: 20px;
+}
+.settingstitle{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.settingsupdatetitle{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: coral;
+}
+.settingsdeletetitle{
+    color:red;
+    font-size: 12px;
+    flex-direction: column;
+}
+.settingsform{
+    display: flex;
+    flex-direction: column;
+}
+.settingspp{
+    display: flex;
+    align-items: center;
+    margin:10px,0;
+}
+.settingspp>img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.settingsppicon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:coral;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.settingsform>label{
+    font-size:20px;
+    margin-top: 20px;
+}
+.settingsform> input{
+    color:gray;
+    margin: 10px,0;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+.settingssubmit{
+    align-self: center;
+    width:150px;
+    border:none;
+    border-radius: 10px;
+    color:white;
+    background-color: teal;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}

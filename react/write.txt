@@ -1,0 +1,83 @@
+import "./write.css"
+
+export default function Write() {
+  return (
+    <div className="writeimg">
+        <img
+        className="write"
+          src="https://e0.pxfuel.com/wallpapers/138/643/desktop-wallpaper-picsart-background-moon-real-moon.jpg"
+          alt=""
+          />
+        <form className="writeform">
+        <div className="writeformgroup">
+            <label htmlFor="fileinput">
+            <i className="writeicon fa-solid fa-plus"></i>
+            </label>
+            <input type="file" id="fileinput" style={{display:"none"}}/>
+            <input type="text" placeholder="title" className="writeinput"
+             auto-focus={true}/>
+        </div>
+        <div className="writeformgroup">
+            <textarea placeholder="Tell your story..."
+             type="text" className="writeinput write text"/>
+        </div>
+        <button className="writesubmit">Publish</button>
+        </form>
+      
+    </div>
+  )
+}
+.write{
+    padding-top: 50px;
+}
+ .writeimg{
+    margin-left: 150px;
+    width: 50vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+
+ }  
+.writeformgroup{
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+
+}
+.writeicon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;
+    color: rgb(121,118,118);
+    cursor: pointer;
+}
+.writeinput{
+    font-size: 30px;
+    border:none;
+    padding: 20px;
+    width: 70vw;
+}
+.writeinput:focus{
+    outline: none;
+}
+.writetext{
+    font-size: 20px;
+    height: 100vh;
+}
+.writesubmit{
+    position: absolute;
+    top:20px;
+    right:50px;
+    color: white;
+    background-color: teal;
+    padding:10px;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}

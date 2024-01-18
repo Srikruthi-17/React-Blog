@@ -1,0 +1,75 @@
+import "./register.css"
+
+export default function Register() {
+  return (
+    <div className="login">
+        <span className="registertitle">Register</span>
+        <div className="profile">
+       <form  className="registerform">
+       <label>Username</label>
+        <input type="text" className="registerinput" placeholder="enter your name..."></input>
+        <label>Email</label>
+        <input type="text" className="registerinput" placeholder="enter your email..."></input>
+        <label>Password</label>
+        <input type="password" className="registerinput" placeholder="enter your password..."></input>
+        <button className="registerbutton">Register</button>
+      
+       <button className="registerloginbutton">login</button>
+       </form>
+       </div>
+      
+    </div>
+  );
+}
+.register{
+    height: calc(100vh-50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background:linear-gradient(
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.5)
+    ),
+     url("https://media.istockphoto.com/id/1016975812/photo/sign-up-username-password-log-in.jpg?s=612x612&w=0&k=20&c=Ou1dmRySqeRlFLNeGbx4u_ci4ePrHHFXlRkZ10JRC8E=");
+    background-size: cover;
+    justify-content: center;
+} 
+.registertitle{
+    font-size: 40px;
+    font-style: italic;
+}
+.registerform{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.registerform > label{
+    margin: 20px,0;
+
+}
+.registerinput{
+    padding: 10px;
+    border-color: white;
+    border: none;
+}
+.registerbutton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color:teal;
+    border: none;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+.registerloginbutton{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color:coral;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color:white;
+    border-radius: 10px;
+}
