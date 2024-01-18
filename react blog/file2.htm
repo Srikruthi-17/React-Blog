@@ -1,0 +1,16 @@
+<html>
+<body>
+<?php
+$myfile="sample.txt";
+$link=fopen($myfile,'r');
+$myfilecontent=fread($link,filesize($myfile));
+fclose($link);
+echo $myfilecontent;
+ $myfile2="sample1.txt";
+ $link2=fopen($myfile2,'wt') or die("cant open file");
+ $newcontents=$myfilecontent;
+ fwrite($link2,$newcontents);
+ fclose($link2);
+?>
+</body>
+</html>
